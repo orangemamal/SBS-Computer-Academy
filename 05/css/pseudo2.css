@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* TODO: 여기에 작성해보세요 */
+section {padding: 10px;}
+
+/* 종속 선택자
+    -table 태그이면서, class="first"인 요소를 선택
+*/
+table.first {
+    width:100%;
+    border-collapse: collapse; /* 이중실선 제거 */
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow: 5px 5px 10px #aaa;
+    /* 그림자 : X축 Y축 블러 색상 */
+}   
+
+table.first th {
+    padding: 8px;
+    background-color: rgb(51, 131, 255);
+    color:white;
+    letter-spacing:3px;
+}
+table.first th:nth-child(2) {letter-spacing: 45px;}
+
+table.first td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* td 태그 중 첫번째 자식요소를 선택 */
+table.first td:first-child {width:10%}
+/* td 태그 중 두번째 자식요소를 선택 */
+table.first td:nth-child(2) {width:70%}
+/* td 태그 중 마지막 자식요소를 선택 */
+table.first td:last-child {width:20%;}
+
+/* 자식요소 중 홀수인 요소만 선택 */
+table.first tr:nth-child(odd) {
+    background-color: rgba(200,200,200,0.7);
+}
+/* 자식요소 중 짝수인 요소만 선택 */
+table.first tr:nth-child(even) {
+    background-color: white;
+}
+
+/* TODO: 여기에 작성해보세요 */
+
+table.first th,
+table.first td {
+    border-left:1px solid #ccc;
+}
+
+/* :hover
+    마우스가 요소에 올라가있는 상태 */
+table.first tr:hover {
+    background-color: #9d9dff;
+    color:white;
+    cursor: pointer;
+}
+
+/* ==============================2번째 테이블 시작===================== */
+
+
+/* :empty
+    내용이 없는 상태를 선택 / 내용이 있을 때는 선택이 안됨.
+*/
+p:empty {
+    margin:50px;
+}
+
+/* TODO: 여기에 작성해보세요 */
+table.second {
+    width:100%;
+    border-collapse: collapse;
+}
+table.second th { 
+    padding: 8px;
+    background-color: orange;
+    color:white;
+    letter-spacing: 3px;}
+table.second td { 
+    padding: 10px;
+    text-align:center;
+ }
+
+table.second td:first-of-type {width:15%;} 
+table.second td:nth-of-type(2) {width:65%;}
+table.second td:last-of-type  {width:20%;}
+
+/* 홀수행만 */
+table.second tr:nth-of-type(odd) {
+    background-color:#ddd;
+}
+
+/* 짝수행만 */
+table.second tr:nth-of-type(even) {
+    background-color:#ddd;
+}
+
+/* 마우스 올렸을 때 */
+table.second tr:hover {
+    background-color: coral;
+    color: white;
+    cursor:pointer;
+}
+
+/* part1 : nth-of-type */
+/* TODO: 여기에 작성해보세요 */
+section.part1 div:first-of-type {
+    background-color: cornflowerblue;
+}
+section.part1 div:last-of-type {
+    background-color: coral;
+}
+section.part1 div:nth-of-type(2) {
+    background-color: lightblue;
+}
+section.part1 div:nth-last-of-type(2) {
+    background-color: mediumaquamarine;
+}
+/* part2 : nth-child */
+/* TODO: 여기에 작성해보세요 */
+section.part2 div:first-child {
+    background-color: cornflowerblue;
+}
+section.part2 div:last-child {
+    background-color: coral;
+}
+section.part2 div:nth-child(2) {
+    background-color: lightblue;
+}
+section.part2 div:nth-last-child(2) {
+    background-color: mediumaquamarine;
+/* div 태그를 선택했기에 <p>에는 적용되지x 그래서 <div 수도 선택자 5>에 색상이 적용된다. */
+
+/* child속성은 div에서 첫번째가 아니라 자식 요소 전체에서 첫번째부터 따지기 때문에 <h2>태그를 첫번째 요소로 여긴다. */
+/* 형제요소의 <div>태그 말고 포함되어있을 경우에는 nth-child를 사용하지 말아야한다는 예시 */
+/* 이것을 개선하기위해 css버전이 올라가면서 of-type 선택자가 생겼다. */

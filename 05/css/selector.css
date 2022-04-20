@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+/* 
+    전체 선택자를 이용. 모든 선택자의 margin과 padding을 0으로 지정
+    : 요소가 갖는 기본 여백을 제거
+ */
+
+/* 
+    * : 전체 선택자 - 모든 요소를 지정하는 선택자
+*/
+* {margin:0; padding:0;}
+
+/* 태그 선택자 : 태그의 이름으로 요소를 지정하는 선택자 */
+header {
+    height:85px;
+    background-color: #f0f0f0;
+    padding:10px;
+}
+header h1 {
+    float: left;
+    font-size: 1.8rem; /* rem : html(루트) 요소에 대한 배율로 적용 (기본 16px) */
+}
+header ul {float:right; }
+header ul li {
+    display:inline-block;
+    list-style-type:none;
+}
+article {min-height:500px;}
+article section {
+    float:left;
+    padding:50px;
+}
+article aside {
+    float:right;
+    width:200px;
+    background-color: #fedd31;
+    padding:20px;
+    text-align: center;
+}
+footer {
+    height:10px;
+    line-height: 10px;
+    background-color: #c0dce7;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* 클래스 선택자 */
+/* TODO: 여기에 작성해보세요 */
+.container {
+    width:900px;
+    margin:0 auto; /* 가운데 정렬 */
+}
+
+/* 종속선택자 */
+/* h1 태그 이면서, 동시에 class 속성값이 'logo'인 요소를 선택 */
+/* 중복될 경우에 디테일한 지정 및 구태여 안써도 괜찮긴하지만, 후에 애니메이션이나 다른 기능에서 종속선택자를 붙이고 띄고해서 기능을 사용한다.  */
+h1.logo {
+    background: url(../img/logo.png) no-repeat center left;
+    background-size: cover;
+    width:220px;
+    height:70px;
+    /* text-indent:-9999px;  */
+    /* 들여쓰기와 내어쓰기는 text-indent 속성으로 만듭니다.
+    값이 양수이면 들여쓰기, 값이 음수이면 내어쓰기가 됩니다.
+    기본값은 0입니다.
+    내어쓰기를 할 때는 왼쪽에 여백을 적절히 줍니다. */
+    margin-left:20px;
+}
+/* logo 클래스를 만들면서 동시에 선택자 지정?이라고 생각해야하나 */
