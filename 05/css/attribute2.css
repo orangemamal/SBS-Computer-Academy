@@ -7,6 +7,12 @@ form label {
 }
 
 input[type^='t'],
+textarea {
+    border: 1px sloid #ccc;
+    padding: 8px;
+    border-radius: 5px;
+    width: 300px;
+}
 
 textarea {
     resize: none;
