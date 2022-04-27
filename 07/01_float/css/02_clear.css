@@ -1,0 +1,40 @@
+.container {
+    position: relative;
+    width: 1024px;
+    min-height: 500px;
+    border: 5px dashed orange;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.inner {
+    height: 100px;
+}
+
+.item {
+    width: 300px;
+    height: 200px;
+}
+
+.left {
+    float: left;
+    background-color: pink;
+}
+
+.right {
+    float: right;
+    background-color: lightblue;
+}
+
+.next {
+    background-color: cornflowerblue;
+}
+/* 위에 존재하는 박스들의 영향을 받는 것을 뒤에 영향받는 요소에 clear를 줘서 없애야 나타나진다. */
+/* 결국, float을 쓰면 항상 다음 element가 영향을 받는다는 의미, 
+    float과 clear는 항상 같이 사용해야함. */
+.clear-left {clear: left;}
+.clear-right {clear: right;}
+.clear-both {clear: both;}

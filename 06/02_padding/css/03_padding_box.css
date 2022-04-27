@@ -1,0 +1,30 @@
+
+.container {
+    position: relative;
+    width: 1200px;
+    border: 5px dashed orange;
+    margin: auto;
+    text-align: center;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    line-height: 100px; /* px단위를 빼먹으니까, text가 박스밖으로 뛰쳐나가는 현상이 존재 단위도 빼먹지 않는 디테일을 챙기자!*/
+    border: 1px solid gray;
+    background-color: #ddd;
+}
+
+.box1 {
+    padding: 20px;
+    line-height: 100px;
+    box-sizing: content-box;
+    /* 컨텐츠 크기만 박스의 크기로 지정 */
+}         
+.box2 {
+    padding: 20px;
+    line-height: 60px;
+    box-sizing: border-box;
+    /* content + padding + border 포함하여 박스의 크기로 지정 */
+}        
+

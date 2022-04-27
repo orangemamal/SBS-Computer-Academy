@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/01_box-sizing.css">
+    <title>box-sizing</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>box-sizing: content-box;</h1>
+        <p>content + padding + border까지 크기를 width, height로 지정한다.</p>
+        <div class="inner">
+            <div class="item1 left"></div>
+            <div class="item1 right"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h1>box-sizing: border-box;</h1>
+        <p>content + padding + border까지 모든 크기가 200px안에 채워짐</p>
+        <div class="inner">
+            <div class="item2 left"></div>
+            <div class="item2 right"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
