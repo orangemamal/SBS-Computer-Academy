@@ -1,0 +1,26 @@
+
+* {margin: 0; padding: 0;}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    /* 5회 반복 설정 */
+    animation: bg 8s 5;
+}
+
+@keyframes bg {
+    0% {background-color: aquamarine;}
+    25% {background-color: #f5c7f7;}
+    50% {background-color: #f5ef9c;}
+    75% {background-color: #90f79e;}
+    100% {background-color: aquamarine;}
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 60px;
+}
